@@ -1,0 +1,249 @@
+*{
+  box-sizing: all;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  /* background-color: rgba(244, 208, 63, 1)  ;
+  background-repeat: no-repeat; */
+  /* background: url(../Logo/bg343.jpg) no-repeat center center/cover; */
+  position: absolute;
+  z-index: 100;
+}
+
+
+#main{
+  width: 100%;
+  height: 20vh;
+  position: relative;
+}
+
+
+.nav{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: static;
+  top: 0;
+  left: 0;
+  height: 60px;
+  /* width: 100%; */
+  background-color: #513d7c91;
+  box-shadow: 0 0 10px 4px rgb(41 205 239 / 69%);
+  /* z-index: 1; */
+  margin-right: 60%;
+  /* background: none; */
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+
+.logo img{
+  height: 52px;
+  display: flex;
+  border-radius: 37px;
+}
+
+.menu{
+  list-style: none;
+  display: contents;
+  margin-left: 60%;
+}
+
+.menu li a{
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  margin-top: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.social{
+  list-style: none;
+  display: flex;
+  margin-left: 100%;
+  font-weight: bold;
+}
+
+
+.name{
+  font-weight: lighter;
+}
+
+
+.developer{
+  margin-left: 5%;
+  text-align: center;
+
+}
+
+.bottom{
+  list-style: none;
+  display: flex;
+  height: 40px;
+  margin-top: 5%;
+  margin-bottom: 1rem;
+  font-size: 0.2em;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.contact{
+  text-align: center!important;
+}
+
+.image img{
+
+  width: 40%;
+  height: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  float: right; 
+  padding-right: 30px;   
+ 
+}
+
+.main-content{
+  display: flex;
+  justify-content: space-around;
+  margin: -62px;
+  height: 408px;
+  /* background: url(../Logo/bg343.jpg) no-repeat center center/cover; */
+  /* top: 0px;
+  margin-top: -80px; */
+}
+
+.main-content::before{
+  content: "";
+  position: absolute;
+    height: 42%;
+    margin-top: -80px; 
+    width: 100%;
+    z-index: -1;/* used when the content get hidden beyond the background color*/
+    opacity: 0.90;
+    background: url(../Logo/bg999.jpg) no-repeat center center/cover;
+}
+.heading{
+  color: black;
+  font-family: 'Calibary,Arial, Helvetica';
+  font-style: inherit;
+  margin-left: 9%;
+  font-weight: bold;
+  font-size: 59px;
+  display: inline-flex;
+}
+
+
+.line2{
+  color:black;
+  display: flex;
+  font-family: 'Calibary,Arial, Helvetica',cursive;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.start{
+  font-family: 'Reggae One';
+  background-color: white;
+  color: black;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #59e4e2;
+  border-radius: 28px;
+  margin-left: 35%;
+  box-shadow: 0 0 10px 4px rgba(146, 148, 248, .4);
+  
+}
+
+.start:hover{
+  transform:scale(1.1);
+  /* background-color: #563d7c; */
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 0 10px 4px rgb(1 199 255);
+}
+
+.menu li a:hover{
+  /* background-color: rgba(244, 208, 63, 1); */
+  color:  white;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 4px rgb(41 195 239);
+}
+
+.developer{
+  font-size: 18px;
+    width: 100%;
+    color: white;
+    background-color: #3d5a7c ;
+    margin: -18px auto;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 0 10px 4px rgb(41 195 239);
+}
+
+/* extra css */
+.h-primary{
+  font-size: 3.8rem;
+    margin: 42px auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    padding: -4px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.h-secondary{
+  font-size: 1.8rem;
+  padding: 12px;
+  font-family: 'Baloo Bhai 2', cursive;
+  text-align: center;
+}
+.center{
+  font-size: 26px;
+}
+#services{
+  margin: 34px;
+  display: flex;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+#services .box{
+  border: 2px solid rgb(0, 66, 128);
+  padding: 34px;
+  margin: 3px 6px;
+  border-radius: 24px;
+  background-color: rgb(203 209 212);
+  font-family: 'Baloo Bhai 2', cursive;
+  
+}
+#services .box:hover{
+  box-shadow: 0 0 10px 4px rgb(41 195 239);
+}
+
+#services .box p{
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.box:hover{
+  transform:scale(1.1);
+}

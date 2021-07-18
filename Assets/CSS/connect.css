@@ -1,0 +1,91 @@
+*{
+  box-sizing: all;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: white  ;
+  background-repeat: no-repeat;
+}
+
+
+#main{
+  width: 100%;
+  height: 20vh;
+  position: relative;
+}
+.fun{
+
+  color:#242124;
+  font-family: 'Arial, Helvetica',cursive;
+  font-size: 40px;
+  
+}
+
+.nav{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: static;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #563d7c ;
+  box-shadow: 0 0 10px 4px rgb(170 41 239);
+  z-index: 1;
+  margin-right: 60%;
+}
+
+.logo img{
+  height: 66px;
+  border-radius: 49px;
+}
+
+.menu{
+  list-style: none;
+  display: contents;
+  margin-left: 60%;
+}
+
+.menu li a{
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+.heading{
+  color:#242124 ;
+  font-family: 'Arial, Helvetica',cursive;
+  font-style: inherit;
+  margin-left: 3%;
+  font-size: 50px;
+  margin-bottom: 1cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.menu li a:hover{
+  box-shadow: 0 0 10px 4px rgb(170 41 239);
+  color:  white;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 12px;
+}

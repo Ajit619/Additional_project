@@ -1,0 +1,162 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background: url(../Logo/bg555.jpg) no-repeat center center/cover;
+  
+}
+
+#main{
+  width: 100%;
+  height: 20vh;
+  position: relative;
+}
+
+.nav{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: static;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #54505d91;
+  box-shadow: 0 0 10px 4px rgb(151 173 183);
+  z-index: 1;
+  margin-right: 60%;
+}
+
+
+.logo img{
+  border-radius: 40px;
+  height: 50px;
+}
+
+.menu{
+  list-style: none;
+  display: contents;
+  margin-left: 60%;
+}
+
+.menu li a{
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+
+.image img{
+  width: 150%;
+  height: 60%;
+  box-shadow: 0 0 1px rgba(0,0,0,0.3);
+  padding-top: 40px;
+}
+
+.main-content{
+  display: flex;
+  justify-content: space-around;
+  margin-right: 10%;
+  
+}
+
+.heading{
+  color:#242124 ;
+  font-family: 'Calibary,Arial, Helvetica';
+  font-style: inherit;
+  margin-left: 2%;
+  font-size: 50px;
+}
+
+
+.line{
+  color:#242124;
+  font-family: 'Calibary,Arial, Helvetica',cursive;
+  font-size: 22px;
+  margin-left: 2%; 
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 119px;
+}
+
+
+
+
+.start{
+  font-family: 'Calibary,Reggae One', cursive;
+  background-color: white ;
+  color: green;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid indigo;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin-left: 10%;
+}
+
+.start:hover{
+  background-color: green;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+
+.menu li a:hover{
+  box-shadow: 0 0 10px 4px rgb(232 232 232);
+  color:  white;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.developer{
+  font-size: 18px;
+    width: 100%;
+    color: white;
+    background-color: #54505d91;
+    margin: -18px auto;
+    padding: 16px;
+    text-align: center;
+    margin-top: 3px;
+    box-shadow: 0 0 10px 4px rgb(151 173 183);
+}
+
+
+.bottom{
+  list-style: none;
+  display: flex;
+  height: 40px;
+  margin-top: 5%;
+  margin-bottom: 1rem;
+  font-size: 0.2em;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 1px;
+}

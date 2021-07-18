@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Customer Details - Basic banking system</title>
+
+  <script src="Assets/Javascript/script.js"></script>
+  
+	<link href="Assets/CSS/customerpage.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</head>
+
+<body>
+	<section id="main">
+		<nav class="nav">
+			<a href="./index.html" class="logo">
+				<img src="Assets/Logo/logo322.png" alt="Rohitbank">
+      </a>
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a id="connect" class="transfer" href="./connect.html">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="self_info">
+        <h2>Account Holder Name: Ajitkumar Sharma</h2>
+        <h4>Total Bank Balance: INR <span id="my_Balance">30000</span></h4>
+
+        <button class="btn" data-toggle="modal" data-target="#sendMoney">Money Transfer</button>
+        <a class="btn" href="" data-toggle="modal" data-target="#transactionHistory">Transaction History</a>
+  </div>
+
+  <!--  Transfer of Money -->
+  <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"> Money Transfer</h5>
+                  <button type="button" class="close" data-dismiss="modal"  aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                    <div class="input-group mb-3">
+                        <input type="text" id="enterName" class="form-control" placeholder="Recipient's Email"
+                            aria-label="Recipient's E-mail" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">INR</span>
+                      </div>
+                      <input type="text" id="enterAmount" class="form-control" placeholder=" Enter the Amount"
+                        aria-label="Amount (to the nearest dollar)">
+                      <div class="input-group-append">
+                          <span class="input-group-text">.00</span>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button  type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" onclick="perform_transaction()" class="btn btn-success" data-dismiss="modal">Transfer
+                    Money</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- Transaction History -->
+
+  <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ol id="transaction-history-body">
+
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+ <!-- Costumer's details -->
+
+  <div class="container">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr class="table-danger">
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">A/c No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Bank Balance(in INR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light">
+                        <td scope="row">1</td>
+                        <td >24355895</td>
+                        <td>Rahul</td>
+                        <td>rahul@gmail.com</td>
+                        <td>
+                            <p id="rahulBankBalance">50000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">2</td>
+                        <td >27952362</td>
+                        <td>Nisheeth</td>
+                        <td>nisheeth@gmail.com</td>
+                        <td>
+                            <p id="nisheethBankBalance">70000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">3</td>
+                        <td >28955653</td>
+                        <td>Harsh</td>
+                        <td>harsh@gmail.com</td>
+                        <td>
+                            <p id="harshBankBalance">2500</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">4</td>
+                        <td >65234825</td>
+                        <td>Swapnil</td>
+                        <td>swapnil@gmail.com</td>
+                        <td>
+                            <p id="swapnilBankBalance">220000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">5</td>
+                        <td >58462629</td>
+                        <td>Prabal</td>
+                        <td>prabal@gmail.com</td>
+                        <td>
+                            <p id="prabalBankBalance">9200</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">6</td>
+                        <td >63695952</td>
+                        <td>Divya</td>
+                        <td>divya@gmail.com</td>
+                        <td>
+                            <p id="divyaBankBalance">300000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">7</td>
+                        <td>65266254</td>
+                        <td>Aditi</td>
+                        <td>aditi@gmail.com</td>
+                        <td>
+                            <p id="aditiBankBalance">65000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">8</td>
+                        <td >26565646</td>
+                        <td>Shivam</td>
+                        <td>shivam@gmail.com</td>
+                        <td>
+                            <p id="shivamBankBalance">23460</p>
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">9</td>
+                        <td >54251523</td>
+                        <td>Nishi</td>
+                        <td>nishi@gmail.com</td>
+                        <td>
+                            <p id="nishiBankBalance">45030</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">10</td>
+                        <td >26456655</td>
+                        <td>Ritik</td>
+                        <td>ritik@gmail.com</td>
+                        <td>
+                            <p id="ritikBankBalance">1100000</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    
+    
+    
+</body>
+</html>
